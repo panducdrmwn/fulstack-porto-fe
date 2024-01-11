@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import axios from 'axios'
-import {toast} from 'react-hot-toast'
+import { toast } from 'react-hot-toast'
 
 export default function SignUp() {
 
@@ -8,7 +8,7 @@ export default function SignUp() {
     const [password, setPassword] = useState('')
 
     async function signup(){
-        const data = await axios.post('http://103.181.183.5:3000/signup', 
+        const data = await axios.post('http://127.0.0.1:3000/signup', 
         {
             username, password
         })
@@ -22,7 +22,7 @@ export default function SignUp() {
 
   return (
   
-
+<div className='bg-gray-400'>
   <div className="min-h-screen flex items-center justify-center">
     <div className="bg-white p-8 rounded shadow-md max-w-md w-full">
       <h2 className="text-2xl font-semibold mb-4">Sign Up</h2>
@@ -42,7 +42,7 @@ export default function SignUp() {
      
     </div>
   </div>
-
+  </div>
 
   )
 }
